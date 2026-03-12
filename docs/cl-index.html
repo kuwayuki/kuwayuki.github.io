@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clux - サポート / clux - Support</title>
+  <style>
+    :root {
+      --primary: #208AEF;
+      --primary-dark: #1A6FBF;
+      --bg: #F0F6FE;
+      --text: #1A2A3A;
+      --text-light: #4A5A6A;
+      --white: #FFFFFF;
+      --border: #D0E0F0;
+      --accent: #34C759;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--white);
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .lang-switcher button {
+      padding: 8px 20px;
+      border: 2px solid var(--primary);
+      border-radius: 20px;
+      background: var(--white);
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-switcher button.active {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .lang-switcher button:hover {
+      opacity: 0.85;
+    }
+
+    section {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    section h2 {
+      font-size: 20px;
+      color: var(--primary-dark);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    section h3 {
+      font-size: 16px;
+      color: var(--text);
+      margin: 16px 0 8px;
+    }
+
+    section p, section li {
+      color: var(--text-light);
+      font-size: 15px;
+    }
+
+    section ul, section ol {
+      padding-left: 24px;
+      margin: 8px 0;
+    }
+
+    section li {
+      margin-bottom: 6px;
+    }
+
+    code {
+      background: var(--bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      color: var(--primary-dark);
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-item h3 {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .faq-item p {
+      margin-top: 4px;
+    }
+
+    .contact-link {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 0;
+      color: var(--text-light);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 id="header-title">clux</h1>
+    <p id="header-subtitle">サポートページ</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="lang-switcher">
+    <button id="btn-ja" class="active" onclick="switchLang('ja')">日本語</button>
+    <button id="btn-en" onclick="switchLang('en')">English</button>
+  </div>
+
+  <!-- Japanese Content -->
+  <div id="content-ja">
+    <section>
+      <h2>cluxについて</h2>
+      <p>cluxは、iPhone・iPadからPCをリモート操作できるSSHターミナルアプリです。SSH経由でMac・Windows・Linuxに接続し、tmuxセッションを通じてAI CLIツール（Claude Code等）をリアルタイムに操作できます。</p>
+    </section>
+
+    <section>
+      <h2>セットアップ手順</h2>
+      <ol>
+        <li>PCのSSHサーバーを有効にします（Mac: 「システム設定」→「一般」→「共有」→「リモートログイン」、Windows: OpenSSH Serverを有効化）</li>
+        <li>cluxアプリの「設定」タブを開きます</li>
+        <li>PCのIPアドレス（またはホスト名）、ポート番号（通常は22）、ユーザー名、パスワードを入力します</li>
+        <li>「接続テスト」ボタンをタップして接続を確認します</li>
+        <li>接続に成功したら、ホーム画面からセッションを作成できます</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>操作のヒント</h2>
+      <ul>
+        <li>クイックアクションバーから<code>Ctrl+C</code>や<code>Ctrl+D</code>をワンタップで送信できます</li>
+        <li>音声入力を使うと、キーボードなしでコマンドを送信できます</li>
+        <li>複数のセッションをタブで切り替えて同時に管理できます</li>
+        <li>AI設定からCLIツールの動作モードやWorktreeの有効/無効を切り替えられます</li>
+        <li>セッション一覧を下にスワイプすると、最新のセッション情報に更新されます</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>よくある質問</h2>
+
+      <div class="faq-item">
+        <h3>Q. SSH接続ができません</h3>
+        <p>デバイスとPCが同じネットワークに接続されているか確認してください。Mac: 「システム設定」→「一般」→「共有」で「リモートログイン」が有効か確認。Windows: 「設定」→「アプリ」→「オプション機能」で「OpenSSH Server」が有効か確認。IPアドレスはネットワーク設定から確認できます。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. ターミナルの表示が遅い・文字化けする</h3>
+        <p>ネットワーク環境によって表示に遅延が生じる場合があります。同じネットワーク内で安定したWi-Fi接続をお試しください。文字化けが発生する場合は、PC側のターミナルのエンコーディング設定をUTF-8にしてください。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. 音声入力はどの言語に対応していますか？</h3>
+        <p>現在は日本語の音声認識に対応しています。Apple標準の音声認識APIを使用しています。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. iPadでも使えますか？</h3>
+        <p>はい。iPhone・iPadの両方に対応しています。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. Windowsにも接続できますか？</h3>
+        <p>はい。WindowsでOpenSSH Serverが有効であれば接続できます。Mac、Windows、LinuxなどSSHサーバーが動作するPCに接続可能です。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. PC側に何かインストールが必要ですか？</h3>
+        <p>SSHサーバーが有効であれば基本的な操作は可能です。AI CLIツール（Claude Code等）を使用する場合は、PC側にそのツールがインストールされている必要があります。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. 外出先から接続できますか？</h3>
+        <p>cluxはローカルネットワーク（同じWi-Fi）内での接続を前提としています。外出先からの接続にはVPNなどの設定が別途必要です。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>ご質問やご要望がございましたら、以下のメールアドレスまでお気軽にご連絡ください。</p>
+      <p style="margin-top: 12px;">
+        <a class="contact-link" href="mailto:kuwayuki.dev@gmail.com">kuwayuki.dev@gmail.com</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- English Content -->
+  <div id="content-en" class="hidden">
+    <section>
+      <h2>About clux</h2>
+      <p>clux is a remote SSH terminal app that lets you control your PC from your iPhone or iPad. Connect to Mac, Windows, or Linux via SSH and operate AI CLI tools (such as Claude Code) in real time through tmux sessions.</p>
+    </section>
+
+    <section>
+      <h2>Setup</h2>
+      <ol>
+        <li>Enable SSH on your computer (Mac: System Settings &gt; General &gt; Sharing &gt; "Remote Login". Windows: Settings &gt; Apps &gt; Optional features &gt; "OpenSSH Server")</li>
+        <li>Open the "Settings" tab in the clux app</li>
+        <li>Enter your computer's IP address (or hostname), port number (usually 22), username, and password</li>
+        <li>Tap "Test Connection" to verify the connection</li>
+        <li>Once connected, you can create sessions from the home screen</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Tips</h2>
+      <ul>
+        <li>Use the quick action bar to send <code>Ctrl+C</code> or <code>Ctrl+D</code> with a single tap</li>
+        <li>Use voice input to send commands without a keyboard</li>
+        <li>Switch between multiple sessions using tabs</li>
+        <li>Adjust CLI tool behavior mode and worktree settings from AI Settings</li>
+        <li>Pull down on the session list to refresh with the latest session information</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h3>Q. I can't connect via SSH</h3>
+        <p>Make sure your device and computer are on the same network. Mac: check that "Remote Login" is enabled in System Settings &gt; General &gt; Sharing. Windows: check that "OpenSSH Server" is enabled in Settings &gt; Apps &gt; Optional features. You can find your IP address in your network settings.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. The terminal display is slow or garbled</h3>
+        <p>Display latency may occur depending on your network conditions. Try using a stable Wi-Fi connection on the same network. If you see garbled text, check that your computer's terminal encoding is set to UTF-8.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. Which languages does voice input support?</h3>
+        <p>Currently, Japanese speech recognition is supported. It uses Apple's standard speech recognition API.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. Does it work on iPad?</h3>
+        <p>Yes. clux supports both iPhone and iPad.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. Can I connect to Windows?</h3>
+        <p>Yes. You can connect to Windows with OpenSSH Server enabled. clux works with any computer running an SSH server, including Mac, Windows, and Linux.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. Do I need anything installed on my computer?</h3>
+        <p>Basic operation requires only an SSH server. If you want to use AI CLI tools (such as Claude Code), they need to be installed on your computer.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q. Can I connect from outside my home?</h3>
+        <p>clux is designed for connections within a local network (same Wi-Fi). Connecting from outside requires additional setup such as a VPN.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>If you have questions or feedback, please reach out to us at the email address below.</p>
+      <p style="margin-top: 12px;">
+        <a class="contact-link" href="mailto:kuwayuki.dev@gmail.com">kuwayuki.dev@gmail.com</a>
+      </p>
+    </section>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2026 kuwayuki. All rights reserved.</p>
+    <p style="margin-top: 8px;">
+      <a href="./privacy" id="footer-privacy-link">プライバシーポリシー</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  function switchLang(lang) {
+    const jaContent = document.getElementById('content-ja');
+    const enContent = document.getElementById('content-en');
+    const btnJa = document.getElementById('btn-ja');
+    const btnEn = document.getElementById('btn-en');
+    const headerTitle = document.getElementById('header-title');
+    const headerSubtitle = document.getElementById('header-subtitle');
+    const privacyLink = document.getElementById('footer-privacy-link');
+
+    if (lang === 'ja') {
+      jaContent.classList.remove('hidden');
+      enContent.classList.add('hidden');
+      btnJa.classList.add('active');
+      btnEn.classList.remove('active');
+      headerTitle.textContent = 'clux';
+      headerSubtitle.textContent = 'サポートページ';
+      privacyLink.textContent = 'プライバシーポリシー';
+      document.documentElement.lang = 'ja';
+    } else {
+      jaContent.classList.add('hidden');
+      enContent.classList.remove('hidden');
+      btnEn.classList.add('active');
+      btnJa.classList.remove('active');
+      headerTitle.textContent = 'clux';
+      headerSubtitle.textContent = 'Support';
+      privacyLink.textContent = 'Privacy Policy';
+      document.documentElement.lang = 'en';
+    }
+  }
+</script>
+
+</body>
+</html>
