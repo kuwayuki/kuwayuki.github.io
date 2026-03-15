@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service / 利用規約 - Unbreakable</title>
+  <style>
+    :root {
+      --bg: #1a1a2e;
+      --surface: #16213e;
+      --text: #e0e0e0;
+      --text-muted: #a0a0b0;
+      --accent: #e94560;
+      --border: #2a2a4a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      padding: 0;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+    }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+    .lang-switch button {
+      padding: 8px 20px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 36px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    strong { color: #fff; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .article-title {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    @media (max-width: 480px) {
+      .container { padding: 24px 16px 60px; }
+      h1 { font-size: 1.4rem; }
+      h2 { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Terms of Service<br>利用規約</h1>
+    <p class="last-updated">Last Updated / 最終更新日: 2026-03-15</p>
+
+    <div class="lang-switch">
+      <button class="active" onclick="switchLang('ja')">日本語</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+
+    <!-- Japanese -->
+    <div id="lang-ja" class="lang-section active">
+      <h2>第1条（サービスの概要）</h2>
+      <p>Unbreakable（以下「本アプリ」）は、ユーザーが設定した目標（コミットメント）の達成を、第三者（証人）によるPIN認証を通じて支援するiOSアプリケーションです。本アプリは、[YOUR_NAME]（以下「運営者」）が提供します。</p>
+      <p>本利用規約（以下「本規約」）は、本アプリの利用に関する条件を定めるものです。本アプリをダウンロードまたは利用することにより、ユーザーは本規約に同意したものとみなされます。</p>
+
+      <h2>第2条（利用条件）</h2>
+      <ol>
+        <li>本アプリの利用に年齢制限はありませんが、13歳未満の方は保護者の同意のもとでご利用ください。</li>
+        <li>本アプリの利用にアカウント登録は不要です。</li>
+        <li>本アプリはiOSデバイスでのみ利用可能です。</li>
+      </ol>
+
+      <h2>第3条（サービスの内容）</h2>
+      <p>本アプリは以下の機能を提供します。</p>
+      <ol>
+        <li>コミットメント（目標）の作成・管理</li>
+        <li>証人によるPINの設定と認証</li>
+        <li>日次チェックイン機能</li>
+        <li>ストリーク（連続達成日数）の記録・表示</li>
+        <li>デイリーリマインダー通知</li>
+        <li>SNSシェア機能（OS標準のシェアシートを利用）</li>
+      </ol>
+
+      <h2>第4条（ユーザーの責任）</h2>
+      <ol>
+        <li><strong>証人の選定</strong>: ユーザーは、信頼できる証人を自己の判断と責任で選定するものとします。</li>
+        <li><strong>SNS投稿内容</strong>: 本アプリのシェア機能を通じてSNSに投稿される内容について、ユーザーは自己の責任で投稿するものとします。投稿内容が第三者の権利を侵害しないよう注意してください。</li>
+        <li><strong>PINの管理</strong>: 証人が設定したPINの管理は、証人およびユーザーの責任とします。運営者はPINの復旧・リセットを行うことはできません。</li>
+        <li><strong>データのバックアップ</strong>: 本アプリのデータは端末にのみ保存されます。端末の故障・紛失・アプリの削除によるデータの喪失について、運営者は責任を負いません。</li>
+      </ol>
+
+      <h2>第5条（禁止事項）</h2>
+      <p>ユーザーは、本アプリの利用にあたり、以下の行為を行ってはなりません。</p>
+      <ol>
+        <li>本アプリのリバースエンジニアリング、逆コンパイル、逆アセンブル</li>
+        <li>本アプリの改ざんまたは不正な方法での利用</li>
+        <li>他者の権利を侵害するコンテンツのSNSへの投稿</li>
+        <li>本アプリを利用した嫌がらせ、脅迫、その他の違法行為</li>
+        <li>本アプリの運営を妨害する行為</li>
+      </ol>
+
+      <h2>第6条（免責事項）</h2>
+      <ol>
+        <li><strong>SNS投稿に関する免責</strong>: 本アプリのシェア機能を通じてSNSに投稿された内容により生じた損害（名誉毀損、プライバシー侵害、人間関係のトラブル等を含みますがこれに限りません）について、運営者は一切の責任を負いません。</li>
+        <li><strong>サービスの保証</strong>: 本アプリは「現状有姿（as-is）」で提供されます。運営者は、本アプリの正確性、信頼性、完全性、有用性、特定目的への適合性について、明示または黙示を問わず、いかなる保証も行いません。</li>
+        <li><strong>データの喪失</strong>: 端末の故障、OSのアップデート、アプリの不具合等によるデータの喪失について、運営者は責任を負いません。</li>
+        <li><strong>習慣化の効果</strong>: 本アプリの利用による目標達成や習慣形成の効果を保証するものではありません。</li>
+      </ol>
+
+      <h2>第7条（知的財産権）</h2>
+      <p>本アプリに関する著作権、商標権、その他の知的財産権は、運営者に帰属します。ユーザーは、本規約で明示的に許可された範囲を超えて、本アプリの全部または一部を複製、改変、配布、公開することはできません。</p>
+
+      <h2>第8条（サービスの変更・終了）</h2>
+      <ol>
+        <li>運営者は、事前の通知なく、本アプリの機能を変更、追加、または廃止できるものとします。</li>
+        <li>運営者は、やむを得ない事由がある場合、本アプリの提供を終了できるものとします。</li>
+        <li>サービスの終了により生じた損害について、運営者は責任を負いません。</li>
+      </ol>
+
+      <h2>第9条（規約の変更）</h2>
+      <p>運営者は、必要に応じて本規約を変更できるものとします。変更後の規約は、本ページの更新をもって効力を生じるものとします。</p>
+
+      <h2>第10条（準拠法・管轄）</h2>
+      <p>本規約は日本法に準拠し、日本法に従い解釈されるものとします。本規約に関連する紛争については、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</p>
+
+      <h2>第11条（お問い合わせ）</h2>
+      <p>本規約に関するお問い合わせは、下記までご連絡ください。</p>
+      <ul>
+        <li>メール: [YOUR_EMAIL]</li>
+      </ul>
+    </div>
+
+    <!-- English -->
+    <div id="lang-en" class="lang-section">
+      <h2>Article 1 (Service Overview)</h2>
+      <p>Unbreakable (the "App") is an iOS application that helps users achieve their goals (commitments) through PIN-based verification by a third party (witness). The App is provided by [YOUR_NAME] (the "Operator").</p>
+      <p>These Terms of Service (the "Terms") set forth the conditions for using the App. By downloading or using the App, you agree to be bound by these Terms.</p>
+
+      <h2>Article 2 (Conditions of Use)</h2>
+      <ol>
+        <li>There is no age restriction for using the App, but users under 13 should use it with parental consent.</li>
+        <li>No account registration is required to use the App.</li>
+        <li>The App is available exclusively on iOS devices.</li>
+      </ol>
+
+      <h2>Article 3 (Service Features)</h2>
+      <p>The App provides the following features:</p>
+      <ol>
+        <li>Creation and management of commitments (goals)</li>
+        <li>PIN setup and verification by a witness</li>
+        <li>Daily check-in functionality</li>
+        <li>Streak (consecutive achievement days) recording and display</li>
+        <li>Daily reminder notifications</li>
+        <li>Social media sharing (using the OS standard Share Sheet)</li>
+      </ol>
+
+      <h2>Article 4 (User Responsibilities)</h2>
+      <ol>
+        <li><strong>Witness Selection</strong>: Users shall select a trustworthy witness at their own judgment and responsibility.</li>
+        <li><strong>Social Media Posts</strong>: Users are solely responsible for content posted to social media through the App's sharing feature. Please ensure that posted content does not infringe upon the rights of others.</li>
+        <li><strong>PIN Management</strong>: Management of the PIN set by the witness is the responsibility of the witness and the user. The Operator cannot recover or reset PINs.</li>
+        <li><strong>Data Backup</strong>: App data is stored only on the device. The Operator is not responsible for data loss due to device failure, loss, or app deletion.</li>
+      </ol>
+
+      <h2>Article 5 (Prohibited Activities)</h2>
+      <p>Users shall not engage in the following activities when using the App:</p>
+      <ol>
+        <li>Reverse engineering, decompiling, or disassembling the App</li>
+        <li>Tampering with or using the App in unauthorized ways</li>
+        <li>Posting content to social media that infringes upon others' rights</li>
+        <li>Harassment, threats, or other illegal activities using the App</li>
+        <li>Interfering with the operation of the App</li>
+      </ol>
+
+      <h2>Article 6 (Disclaimers)</h2>
+      <ol>
+        <li><strong>Social Media Posts</strong>: The Operator shall not be liable for any damages arising from content posted to social media through the App's sharing feature (including but not limited to defamation, privacy violations, and interpersonal conflicts).</li>
+        <li><strong>Service Warranty</strong>: The App is provided "as-is." The Operator makes no warranties, express or implied, regarding the accuracy, reliability, completeness, usefulness, or fitness for a particular purpose of the App.</li>
+        <li><strong>Data Loss</strong>: The Operator is not responsible for data loss due to device failure, OS updates, app bugs, or other causes.</li>
+        <li><strong>Effectiveness</strong>: The App does not guarantee goal achievement or habit formation results.</li>
+      </ol>
+
+      <h2>Article 7 (Intellectual Property)</h2>
+      <p>All copyrights, trademarks, and other intellectual property rights related to the App belong to the Operator. Users may not reproduce, modify, distribute, or publish all or part of the App beyond the scope expressly permitted by these Terms.</p>
+
+      <h2>Article 8 (Service Changes and Termination)</h2>
+      <ol>
+        <li>The Operator may change, add, or discontinue features of the App without prior notice.</li>
+        <li>The Operator may terminate the provision of the App if there are unavoidable circumstances.</li>
+        <li>The Operator is not liable for damages caused by service termination.</li>
+      </ol>
+
+      <h2>Article 9 (Changes to Terms)</h2>
+      <p>The Operator may modify these Terms as necessary. Modified Terms shall take effect upon the update of this page.</p>
+
+      <h2>Article 10 (Governing Law and Jurisdiction)</h2>
+      <p>These Terms shall be governed by and construed in accordance with the laws of Japan. The Tokyo District Court shall have exclusive jurisdiction of first instance over any disputes relating to these Terms.</p>
+
+      <h2>Article 11 (Contact)</h2>
+      <p>For inquiries regarding these Terms, please contact us at:</p>
+      <ul>
+        <li>Email: [YOUR_EMAIL]</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.lang-section').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.lang-switch button').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.getElementById('lang-' + lang).classList.add('active');
+      var buttons = document.querySelectorAll('.lang-switch button');
+      if (lang === 'ja') { buttons[0].classList.add('active'); }
+      else { buttons[1].classList.add('active'); }
+    }
+  </script>
+</body>
+</html>
